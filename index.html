@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUVE ❤️</title>
+    <link rel="icon" type="image/x-icon" href="./images/icone.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #ffe6f2;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #ff66b3, #ff3385);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        
+        nav {
+            background-color: #ff3385;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+            color: #ffe6f2;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #c130e9;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        h4 {
+            font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+            color: #ff6f61;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            background: linear-gradient(90deg, #ffa07a, #ff4500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 28px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            padding: 5px 0;
+            border-bottom: 3px dashed #ffb347;
+            text-align: center;
+        }
+
+
+        
+        .counter {
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, #ff66b3, #ff3385);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .counter span {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: 250px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .moment {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed #ff66b3;
+        }
+        
+        .moment:last-child {
+            border-bottom: none;
+        }
+        
+        .moment h3 {
+            color: #ff3385;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .moment-date {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .moment-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .moment-photos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 1.5rem;
+        }
+        
+        .moment-photo-container {
+            width: 400px;  
+            height: 400px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            background-color: #f9f9f9;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .moment-photo-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        
+        .moment-photo {
+            max-width: 90%;
+            max-height: 90%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+        
+        .moment-photo-container:hover .moment-photo {
+            transform: scale(1.08);
+        }
+        
+        .moment-description {
+            line-height: 1.7;
+            white-space: pre-line;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        video {
+        border: 5px solid #1db954;
+        border-radius: 15px;
+        width: 80%;
+        max-width: 250px;
+        }
+
+        button {
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        background-color: #ad0ea8;
+        color: #fff;
+        cursor: pointer;
+        }
+        button:hover {
+        background-color: hwb(290 10% 22%);
+        }
+
+        #topButton {
+            display: none; /* Esconde o botão inicialmente */
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            background-color: #ff577f;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+        }
+
+        #topButton:hover {
+            background-color: #e94e72;
+        }
+
+        
+        @media (max-width: 900px) {
+            .moment-photo-container {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .moment-photo-container {
+                width: 100%;
+                height: 280px;
+                max-width: 100%;
+            }
+            
+            .moment-photo {
+                max-width: 95%;
+                max-height: 95%;
+            }
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .counter {
+                font-size: 1.2rem;
+            }
+            
+            .counter span {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lucas & Veronica</h1>
+        <h2>LuVe</h2>
+        <p class="subtitle">Nosso amor em cada detalhe</p>
+    </header>
+    
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#photos">Nossas Fotos</a>
+        <a href="#moments">Momentos Especiais</a>
+        <a href="#desenho">Arte da Artista</a>
+        <a href="#noitedacozinha">Noite da Cozinha</a>
+        <a href="#bichos">Bichos</a>
+    </nav>
+    
+    <div class="container">
+        <section id="home" class="section">
+            <h2>Nosso Amor</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Nosso site para guardarmos nossas lembranças e fotinhas, meu benzinho, para celebrar nosso amor e todos os momentos especiais que compartilhamos juntos. Feliz dia dos namorados. O primeiro de muitos que ainda virão. Moziiiiiiii :D</p>
+
+              <h1>Uma das nossas musicas :)</h1>
+  <button onclick="toggleMusic('thoseEyes')">▶️ Tocar / Pausar</button>
+
+  <audio id="thoseEyes">
+    <source src="./audios/those_eyes.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("audioPlayer");
+
+    function toggleMusic() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+            
+            <div class="counter">
+                <p>Estamos juntos há:</p>
+                <div class="counter-grid">
+                    <div class="counter-item">
+                        <span class="counter-value" id="years">0</span>
+                        <span class="counter-label">Anos</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-value" id="months">0</span>
+                        <span class="counter-label">Meses</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-value" id="days">0</span>
+                        <span class="counter-label">Dias</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-value" id="hours">0</span>
+                        <span class="counter-label">Horas</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-value" id="minutes">0</span>
+                        <span class="counter-label">Minutos</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-value" id="seconds">0</span>
+                        <span class="counter-label">Segundos</span>
+                    </div>
+                </div>
+                <p class="start-date">Desde 25 de agosto de 2024</p>
+            </div>
+        
+        <section id="photos" class="section">
+            <h2>Nossas Fotos</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Algumas fotinhas desse casal lindo</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="./images/Nos dois.jpeg" alt="Nós dois">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/Rei e Rainha.jpeg" alt="Rei & Rainha">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/ixiiiii.jpeg" alt="iiiii">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/tomandouma.jpeg" alt="tomando uma">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/eueela.jpeg" alt="Casal mais lindo que existe">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/noiss.jpeg" alt="amo ela">
+                </div>
+            </div>
+        </section>
+        
+        <section id="moments" class="section">
+            <h2>Momentos Especiais</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Datas importantes na nossa história de amor.</p>
+
+	    <div class="moment">
+                <h3>Onde tudo começou</h3>
+                <p class="moment-date">3 de Julho de 2024</p>
+		        <div class="moment-content">
+                	<p class="moment-description">Tudo começou em um belo dia de frio, A Ve geralmente ia para a academia de manhã, e como eu fazia faculdade esse horario, eu nunca via ela e nunca iamos nos ver, até que o frio fez com que a linda resolvesse ir a noite, exatamente no horario que eu vou(estava escrito nas estrelas). O resto é historia...</p>
+	            	<p>📍 Attack Fit </p>
+		        <div class="moment-photos">
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/onde tudo começou.jpeg" alt="onde tudo começou">
+                </div>
+                </div>
+                    </div>
+
+	    <div class="moment">
+                <h3>Primeiro Beijo</h3>
+                <p class="moment-date">5 de Julho de 2024</p>
+                <p>Nosso primeiro beijo, logo depois do nosso treininho, eu tinha um role que meu amigo vini tinha me chamado para ir, eu empolgado de estar conhecendo uma mulher tão sensacional, chamei para ir comigo, porém, ela toda timida, recusou de prontidão, mas como eu tava gostando demais dela, expressei o meu desejo de beija-la e foi ali, do outro lado da rua do condominio dos predios em que ela mora, rolou o primeiro de muitos beijinhos nossos.</p>
+		        <p>📍 Moinho Fabrini </p>
+		<div class="moment-photos">
+			<div class="moment-photo-container">
+				<img class="moment-photo" src="./images/primeiro beijo.jpeg" alt="Primeiro beijo">
+			</div>
+		</div>
+            </div>
+            
+            <div class="moment">
+                <h3>Primeiro Encontro</h3>
+                <p class="moment-date">13 de Julho de 2024</p>
+                <p>Depois de uma semana treinando juntos, não tinha como, eu tinha que sair com essa princesa que ganhou meu coração so com um "eae" que quebrou todo o gelo de um primeiro treino juntos, foi ai que a chamei para tomar um choppin na Cozinha dos Fundos Burger. Foi uma noite muito especial e ali eu ja sabia que tinha sido totalmente diferente de tudo que ja tinha vivido.</p>
+		        <p>📍 Casa dos fundos Burger </p>
+
+                <button onclick="toggleMusic('medo')">▶️ Tocar / Pausar</button>
+
+                <audio id="medo">
+                    <source src="./audios/Zé Vaqueiro - Tenho Medo (Video Oficial).mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+		<div class="moment-photos">
+			<div class="moment-photo-container">
+				<img class="moment-photo" src="./images/primeiro encontro.jpeg" alt="Primeiro encontro">
+			</div>
+		</div>
+            </div>
+
+	    <div class="moment">
+            <h3>Início do Amor</h3>
+            <p class="moment-date">20 de Julho de 2024</p>
+            <p>O dia em que soubemos que estavamos gostando um do outro, foi nosso segundo encontro, mas como nos viamos todos os dias, foi como se nos conhecessemos desde de pequenininhos(o que talvez seja verdade, pois nós sempre moramos perto um do outro kkkkk)</p>
+		    <p>📍 Manakah </p>
+            <button onclick="toggleMusic('amado')">▶️ Tocar / Pausar</button>
+
+            <audio id="amado">
+                <source src="./audios/Jorge Ben - Amante Amado.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+		<div class="moment-photos">
+			<div class="moment-photo-container">
+				<img class="moment-photo" src="./images/O amor ja instaurado.jpeg" alt="O amor ja instaurado">
+			</div>
+		</div>
+            </div>
+            
+            <div class="moment">
+                <h3>Início do Namoro</h3>
+                <p class="moment-date">25 de agosto de 2024</p>
+                <p>O dia em que oficializamos nosso amor e começamos essa jornada juntos.</p>
+
+                <button onclick="toggleMusic('casar')">▶️ Tocar / Pausar</button>
+
+                <audio id="casar">
+                    <source src="./audios/Scorpions - Wind Of Change (Official Music Video).mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/namoro.jpeg" alt="namoro">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Passeio no Zoológico</h3>
+                <p class="moment-date">7 de setembro de 2024</p>
+                <p>Um dia mais que especial para nós, vimos vários bichos, vimos o animal mais fofinho do mundo (AuthenticGames) e o axolote, fizemos nosso primeiro videozinho juntos (video mais fofo e lindo do mundo, que mostra o nosso amor e sintonia)</p>
+                <p>Vimos o aguardado Lobo Guará, fiquei muito feliz, porém não vimos o orangutango que não tava afim de dar oi :( (mas vimos o suplaaaa versão passaro, we won kids!!!)</p>
+                <p>📍 Zoológico de São Paulo </p>
+                <button onclick="toggleMusic('zoologico')">▶️ Tocar / Pausar</button>
+
+                <audio id="zoologico">
+                    <source src="./audios/Xuxa - Zoológico (Zoo).mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/zoo.jpeg" alt="zoo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/tamandua.jpeg" alt="zoo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/elefante.jpeg" alt="zoo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/suricato.jpeg" alt="zoo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/comendo.jpeg" alt="zoo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/lanchinho.jpeg" alt="zoo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/loboguara.jpeg" alt="zoo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/supla.jpeg" alt="zoo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/authentic.jpeg" alt="zoo">
+                    </div>
+                </div>
+        
+            </div>
+            <div class="moment">
+                <h3>Nossa primeira viagem juntos em familia (Franco's)</h3>
+                <p class="moment-date">2 de dezembro de 2024</p>
+                <p>Nossa primeira viagem juntos com a nossa familia Franco, fomos para Ubatuba e curtimos bastante juntos :)</p>
+                <p>📍 Ubatuba </p>
+
+                <button onclick="toggleMusic('ocean')">▶️ Tocar / Pausar</button>
+
+                <audio id="ocean">
+                    <source src="./audios/ocean man.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/primeira viagem juntos.jpeg" alt="viagem">
+                </div>
+
+                <div class="moment-photo-container">
+				    <img class="moment-photo" src="./images/primeira viagem juntos2.jpeg" alt="viagem">
+			    </div>
+
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/primeira viagem juntos na praia.jpeg" alt="viagem">
+                </div>
+
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/piscininha.jpeg" alt="viagem">
+                </div>
+
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/primeira trilha juntos.jpeg" alt="viagem">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/viagemuba.jpeg" alt="viagem">
+                </div>
+            </div>
+                </div>
+
+            <div class="moment">
+                <h3>CCXP - Mavis e Johnny</h3>
+                <p class="moment-date">6 de dezembro de 2024</p>
+                <p>Nossa primeira CCXP juntos e fomos dos personagens que mais comparam com a gente (literalmente noisssss)</p>
+                <p>Foi um dia maravilhoso, vimos várias coisinhas, tiramos várias fotos com pessoas que gostaram da fantasia e nos divertimos bastante (pena que perdemos os brindes que tinham que fazer cadastro antes :(</p>
+                <p>(Nunca vou esquecer o deadpool desgraçado que a gente achava que era o seu amigo dan que foi embora do nada na hora de tirar foto com a gente kkkkkkk)</p>
+                <p>📍 São Paulo Expo </p>
+                <button onclick="toggleMusic('tchan')">▶️ Tocar / Pausar</button>
+
+                <audio id="tchan">
+                    <source src="./audios/A música do Tchan da Mavis e do Johnny.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ccxp.jpeg" alt="ccxp">
+                    </div>
+
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Mavis e Johnny.jpeg" alt="mavis e Johnny">
+                    </div>
+
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ccxp2.jpeg" alt="ccxp">
+                    </div>
+
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ccxp3.jpeg" alt="mavis e Johnny">
+                    </div>
+
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ccxp4.jpeg" alt="ccxp">
+                    </div>
+
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ccxp5.jpeg" alt="mavis e Johnny">
+                    </div>
+
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ccxp6.jpeg" alt="ccxp">
+                    </div>
+
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ccxp7.jpeg" alt="mavis e Johnny">
+                    </div>
+
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ccxp_bbb.jpeg" alt="ccxp">
+                    </div>
+
+                    <video autoplay muted loop>>
+                        <source src="./images/noiscupnoddles.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                </div>
+            </div>
+            
+            <div class="moment">
+                <h3>Primeiro trampo juntos</h3>
+                <p class="moment-date">14 de dezembro de 2024</p>
+                <p>O dia em que a gatinha quis se aventurar na criação de drinks ao meu lado, e como ela é perfeita e sensacional, tirou de letra e ainda gostaram dela (que barwoman mais linda aiiiiiii 😍😍)</p>
+                <p>📍 Recanto Lirio dos Vales </p>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Trabalhando juntos pela primeira vez.jpeg" alt="trampo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Aniversário da Veronica - 2024</h3>
+                <p class="moment-date">20 de Dezembro de 2024</p>
+                <p>Uma celebração especial do seu aniversário que marcou nosso relacionamento.</p>
+		        <p>📍 Taverna Medieval </p>
+                <button onclick="toggleMusic('medieval')">▶️ Tocar / Pausar</button>
+
+                <audio id="medieval">
+                    <source src="./audios/So Treiben Wir Den Winter Aus.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+		        <div class="moment-photos">
+			    <div class="moment-photo-container">
+				    <img class="moment-photo" src="./images/niver da gatinha.jpeg" alt="niverrr da linda">
+			    </div>
+                <div class="moment-photo-container">
+				    <img class="moment-photo" src="./images/taverna.jpeg" alt="niverrr da linda">
+			    </div>
+                <div class="moment-photo-container">
+				    <img class="moment-photo" src="./images/taverna medieval.jpeg" alt="niverrr da linda">
+			    </div>
+                <div class="moment-photo-container">
+				    <img class="moment-photo" src="./images/drinkabeer.jpeg" alt="niverrr da linda">
+			    </div>
+                <div class="moment-photo-container">
+				    <img class="moment-photo" src="./images/drinkabeer2.jpeg" alt="niverrr da linda">
+			    </div>
+                <div class="moment-photo-container">
+				    <img class="moment-photo" src="./images/likeabarbarian.jpeg" alt="niverrr da linda">
+			    </div>
+                <div class="moment-photo-container">
+				    <img class="moment-photo" src="./images/hidromel.jpeg" alt="niverrr da linda">
+			    </div>
+                <div class="moment-photo-container">
+				    <img class="moment-photo" src="./images/rainha linda.jpeg" alt="niverrr da linda">
+			    </div>
+                <div class="moment-photo-container">
+				    <img class="moment-photo" src="./images/Rei e Rainha.jpeg" alt="niverrr da linda">
+			    </div>
+		        </div>
+            </div>
+
+            <div class="moment">
+                <h3>Casamento Prima Vitoria</h3>
+                <p class="moment-date">21 de dezembro de 2024</p>
+                <p>Primeira vez casando primos juntos (eu ainda nem conhecia a vitoria e fui convidado para conhecer a familia toda ❤️, fui muito bem recebido por todos (apesar de estar em territorio inimigo, aqui é corinthians porra 🦅)). Foi tudo muito bom, com exceção dos drinks, que modestia parte, os nossos eram bem melhores</p>
+                <p>niver do sogrão tambem hihihi Te amo Sogro ❤️</p>
+                <p>(Deu aquela vontade de casar, mas vimos que precisamos de uma grana boa pra isso, ainda mais que vamos fazer do NOSSO JEITINHO UNICO)</p>
+                <p>📍 Mansão Arabésque </p>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/casamento prima vitoria.jpeg" alt="Casamento">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/casamentovitoria.jpeg" alt="Casamento">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/casamentovitoria2.jpeg" alt="Casamento">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/casamentovitoria3.jpeg" alt="Casamento">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/casamentovitoria4.jpeg" alt="Casamento">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/casamentovitoria5.jpeg" alt="Casamento">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/casamentovi.jpeg" alt="Casamento">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Primeiro natal juntos</h3>
+                <p class="moment-date">25 de dezembro de 2024</p>
+                <p>Nosso primeiro natalzinho juntos, foi muito bom, com muita comida e conhecendo o resto dos parentes que a gatinha não conhecia ainda</p>
+                <p>📍 Recanto Lirio dos Vales </p>
+
+                <button onclick="toggleMusic('natal')">▶️ Tocar / Pausar</button>
+
+                <audio id="natal">
+                    <source src="./audios/Justin Bieber - Mistletoe (Official Music Video).mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/primeironataljuntos.jpeg" alt="natal">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/primeironataljuntos2.jpeg" alt="natal">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/primeironataljuntos3.jpeg" alt="natal">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Primeiro ano novo juntos</h3>
+                <p class="moment-date">31 de dezembro de 2024</p>
+                <p>A virada de ano de um ano incrivel em que eu conheci o amor da minha vida não poderia ser diferente, juntos da nossa familia linda e querida, Eu, meu benzinho Veve, a Sasa, o lindo e a vovó Elvira fizemos o nosso ano novo juntinhos e foi mais que especial ❤️</p>
+                <p>📍 Casa da Vovó </p>
+
+                <button onclick="toggleMusic('scorpions')">▶️ Tocar / Pausar</button>
+
+                <audio id="scorpions">
+                    <source src="./audios/Scorpions - Still Loving You (Official Video).mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/anonovo2.jpeg" alt="reveiao">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/primeiroanonovo.jpeg" alt="reveiao">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Primeiro ano novo juntos.jpeg" alt="reveiao">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="moment">
+                <h3>Niver Mayara Esther</h3>
+                <p class="moment-date">4 de janeiro de 2025</p>
+                <p>Niver da bebezinha da Cleo, onde comemos e bebemos bastante chopp 😋😋😋😋</p>
+                <p>📍 Espaço do bebe </p>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/nivermayara.jpeg" alt="trampo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/nivermayara2.jpeg" alt="trampo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Primeiro vez no Sukiya</h3>
+                <p class="moment-date">18 de janeiro de 2025</p>
+                <p>O tão falado e aclamado Sukiya, que a minha gatinha falava tanto, fomos e pqp, que lugar bom (de quebra ainda aprendemos a fazer a receita deles ainda melhor 😋😋😋, amo muito o nosso guydon e karague)</p>
+                <p>📍 Sukiya </p>
+
+                <button onclick="toggleMusic('japao')">▶️ Tocar / Pausar</button>
+
+                <audio id="japao">
+                    <source src="./audios/真夜中のドア⧸Stay With Me.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Primeira vez no Sukiya.jpeg" alt="trampo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/sukiya.jpeg" alt="trampo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/sukiya2.jpeg" alt="trampo">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/sukiya3.jpeg" alt="trampo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Si Senorr - 5 meses</h3>
+                <p class="moment-date">28 de janeiro de 2024</p>
+                <p>Comemoração dos nossos 5 meses de namoro num lugar que amamos muito, Si senorr (com direito a chapeuzao de mexicano cabron 🫔🌯🌮) </p>
+                <p>📍 Si Senor - Metropole </p>
+
+                <button onclick="toggleMusic('gustas')">▶️ Tocar / Pausar</button>
+
+                <audio id="gustas">
+                    <source src="./audios/Manu Chao - Me Gustas Tu (Official Audio).mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/sisenor.jpeg" alt="sisenor">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/sisenor2.jpeg" alt="sisenor">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/sisenor3.jpeg" alt="sisenor">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/sisenor4.jpeg" alt="sisenor">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/sisenor5.jpeg" alt="sisenor">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/sisenor6.jpeg" alt="sisenor">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/sisenor7.jpeg" alt="sisenor">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/sisenor8.jpeg" alt="sisenor">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Liberdade</h3>
+                <p class="moment-date">8 de fevereiro de 2025</p>
+                <p>O dia em que a gatinha me levou para conhecer a liberdade</p>
+                <p>(na minha cabeça, era o lugar mais esquisito de todos, com otakus e nerds em toda parte, mas até que é bem legal la)</p>
+                <p>Infelizmente, não comemos o hot dog coreano no palito, mas foi muito legal conhecer esse lugar emblematico da cidade de São Paulo</p>
+                <p>📍 Liberdade </p>
+
+                <button onclick="toggleMusic('tokyo')">▶️ Tocar / Pausar</button>
+
+                <audio id="tokyo">
+                    <source src="./audios/Tokyo Reggie.mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                    <video controls>
+                        <source src="./images/libras.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <video controls>
+                        <source src="./images/libras2.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <video controls>
+                        <source src="./images/libras3.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <video controls>
+                        <source src="./images/libras4.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <video controls>
+                        <source src="./images/libras5.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <video controls>
+                        <source src="./images/libras6.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <video controls>
+                        <source src="./images/libras7.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+            </div>
+
+            <div class="moment">
+                <h3>Formatura Lucas</h3>
+                <p class="moment-date">19 de fevereiro de 2025</p>
+                <p>Um dos dias mais importantes da minha vida, um grande passo na minha vida acadêmica e na presença ilustre do amor da minha vida</p>
+                <p>Dia feliz ao lado das pessoas mais importantes para mim :)</p>
+                <p>📍 Teatro Municipal Paulo Machado de Carvalho </p>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Formatura Lucas.jpeg" alt="Formatura">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/formatura Lucas2.jpeg" alt="formatura">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Nossa primeira viagem juntos em familia (Ferreira's)</h3>
+                <p class="moment-date">3 de março de 2025</p>
+                <p>Nossa primeira viagem juntos com a nossa familia Ferreira, fomos para Ilha Comprida, um lugar lindo e tranquilo para aproveitar uma praia de boa</p>
+                <p>Foi muito bom, curtimos bastante com muita brincadeira, volei na piscina, drinks e musica ( e 🧙 bruxaria 🧙)</p>
+                <p>Ainda deu tempo de eu conhecer a tia Ge, uma pessoa incrivel e que nos acolheu, mesmo em pouco tempo, senti todo o carinho que ela tem pelos outros e o amor que ela carrega ❤️</p>
+                <p>Espero que possamos fazer mais muitas viagens em familia assim (mas com o sograo incluso dessa vez)</p>
+                <p>P.S.: Levei a batata de Ovo frito para experimentarmos e pqp, que negocio ruim (a Manu gostou)</p>
+                <p>📍 Ilha Comprida </p>
+
+                <button onclick="toggleMusic('ilha')">▶️ Tocar / Pausar</button>
+
+                <audio id="ilha">
+                    <source src="./audios/Emicida - Cananéia, Iguape e Ilha Comprida (Áudio oficial).mp3.crdownload" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Ilha comprida.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida2.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida3.jpeg" alt="ilha">
+                    </div>
+                    <video autoplay muted loop>>
+                        <source src="./images/ilha comprida4.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida6.jpeg" alt="ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida7.jpeg" alt="ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida8.jpeg" alt="ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida9.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida10.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida11.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida12.jpeg" alt="Ilha">
+                    </div>
+                     <video autoplay muted loop>>
+                        <source src="./images/ilha comprida5.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida13.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida14.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida15.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida16.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida17.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida18.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida19.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida20.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilha comprida21.jpeg" alt="Ilha">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/ilhacomprida23.jpeg" alt="Ilha">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Festa do Raio</h3>
+                <p class="moment-date">6 de abril de 2025</p>
+                <p>Festa que fomos com os parceiros do de kalsa</p>
+                <p>(ainda tive que dar uma volta no rolê todo girando a cabeça que nem um retardado kkkkkkk)</p>
+                <p>📍 Espaço Araguaia </p>
+
+                <button onclick="toggleMusic('festa')">▶️ Tocar / Pausar</button>
+
+                <audio id="festa">
+                    <source src="./audios/Daft Punk - Around The World (Official Music Video Remastered).mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio2.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio3.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio4.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio5.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio6.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio7.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio8.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio9.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio10.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio11.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio12.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio13.jpeg" alt="Raio">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/festaraio14.jpeg" alt="Raio">
+                    </div>
+                    <video autoplay muted loop>>
+                        <source src="./images/festaraio16.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Boliche</h3>
+                <p class="moment-date">16 de abril de 2025</p>
+                <p>Dia que fomos aproveitar o voucher do boliche em Santo André (queriamos ter ido no pula pula legal:(</p>
+                <p>Resultado final:</p>
+                <p>Lucas lindo,bom e cheiroso 3</p>
+                <p>Veronica ruim: 1</p>
+                <p>📍 Arena Bomboliche </p>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/boliche.jpeg" alt="boliche">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/boliche2.jpeg" alt="boliche">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/boliche3.jpeg" alt="boliche">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/boliche4.jpeg" alt="boliche">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/boliche5.jpeg" alt="boliche">
+                    </div>
+                    <video autoplay muted loop>>
+                        <source src="./images/boliche6.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/boliche7.jpeg" alt="boliche">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/boliche9.jpeg" alt="boliche">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/boliche10.jpeg" alt="boliche">
+                    </div>
+                    <video autoplay muted loop>>
+                        <source src="./images/boliche8.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Madalena</h3>
+                <p class="moment-date">19 de abril de 2025</p>
+                <p>Dia em que fomos na Cervejaria Madalena em Santo André com meus pais</p>
+                <p>A linda sempre falou desse lugar e realmente o negocio é bão demais da conta</p>
+                <p>bebemos bastante chopp (fez lembrar nosso primeiro encontro) e ainda comemos um lanchão mutcho bommmm</p>
+                <p>📍 Cervejaria Madalena </p>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/madalena.jpeg" alt="Madalena">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/madalena2.jpeg" alt="Madalena">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/madalena5.jpeg" alt="Madalena">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/madalena4.jpeg" alt="Madalena">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/madalena3.jpeg" alt="Madalena">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Pagode especial do Fabinho</h3>
+                <p class="moment-date">10 de maio de 2025</p>
+                <p>Um dos maiores projetos do @fabinhoferreiracavaco, em que ele alugou um espaço so para ele e curtimos muito uma noite de pagodinho</p>
+                <p>📍 Parecia uma escola </p>
+
+                <button onclick="toggleMusic('pagode')">▶️ Tocar / Pausar</button>
+                <audio id="pagode">
+                    <source src="./audios/Será que é amor (Ao vivo).mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/pagode.jpeg" alt="pagode">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/pagode2.jpeg" alt="pagodinho">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/pagode3.jpeg" alt="pagode">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/pagode4.jpeg" alt="pagodinho">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/pagode5.jpeg" alt="pagode">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/pagode6.jpeg" alt="pagodinho">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/pagode7.jpeg" alt="pagodinho">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Noite de Moscow Mule</h3>
+                <p class="moment-date">22 de maio de 2025</p>
+                <p>Dia em que estavámos morrendo de vontade de mandar 20 Moscow mule para dentro (e se o dindin não acabasse, ia ser uns 20 mesmo kkkk)</p>
+                <p>Ainda bem que descobrimos esse drink delicioso e um lugar que vende barato um dia na semana</p>
+                <p>Datezinho com minha cara metade ❤️</p>
+                <p>📍 Manakah </p>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/moscowmule.jpeg" alt="moscow">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/moscowmule2.jpeg" alt="moscow">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/moscowmule3.jpeg" alt="moscow">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/moscowmule4.jpeg" alt="moscow">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/moscowmule5.jpeg" alt="moscow">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/moscowmule6.jpeg" alt="moscow">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/moscowmule7.jpeg" alt="moscow">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Cinema com a Isa ❤️</h3>
+                <p class="moment-date">24 de maio de 2025</p>
+                <p>Dia especial com a Isa, saímos com a sogra para almoçar feijuca e depois fomos assistir Lilo & Stitch live action</p>
+                <p>(Dormi no meio do filme, mas o filme é bommmm)</p>
+                <p>📍 Golden Square Shopping </p>
+
+                <button onclick="toggleMusic('stitch')">▶️ Tocar / Pausar</button>
+                <audio id="stitch">
+                    <source src="./audios/Hawaiian Roller Coaster Ride (From ＂Lilo & Stitch＂).mp3" type="audio/mpeg">
+                    Seu navegador não suporta áudio.
+                </audio>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Stitch.jpeg" alt="Cinema">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Stitch2.jpeg" alt="Cinema">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Stitch3.jpeg" alt="Cinema">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Stitch4.jpeg" alt="Cinema">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Stitch5.jpeg" alt="Cinema">
+                    </div>
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/Stitch6.jpeg" alt="Cinema">
+                    </div>
+                </div>
+            </div>
+
+            <div class="moment">
+                <h3>Noite de Rock com o Sogro - Cover de Pantera</h3>
+                <p class="moment-date">31 de maio de 2025</p>
+                <p>Noite histórica e especial com o sogrão, curtimos um show de cover de Pantera</p>
+                <p>Curti muito e ainda tocou a musica que eu conhecia :)</p>
+                <p>ROCKKKK N ROLLLLLL 🤘🤘🤘🤘🤘🤘🤘🤪🤪🤪🤪🤪</p>
+                <p>📍 A Gruta </p>
+                <div class="moment-photos">
+                    <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/rock.jpeg" alt="rock">
+                    </div>
+                    <video controls>
+                        <source src="./images/rock2.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <video controls>
+                        <source src="./images/rock3.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <video controls>
+                        <source src="./images/rock4.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <video controls>
+                        <source src="./images/rock5.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="desenho" class="section">
+            <h2>Arte da Artista</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Desenhos feitos pela minha artista favorita, a maior e mais talentosa artista de todas</p>
+            
+            <div class="moment-photos">
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/Desenho.jpeg" alt="Cinema">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/Desenho2.jpeg" alt="Cinema">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/desenho3.jpeg" alt="Cinema">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/desenho4.jpeg" alt="Cinema">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/dedo.jpeg" alt="Cinema">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/desenho5.jpeg" alt="Cinema">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/desenho6.jpeg" alt="Cinema">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/desenho7.jpeg" alt="Cinema">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/desenho8.jpeg" alt="Cinema">
+                </div>
+            </div>
+        </section>
+
+        <section id="noitedacozinha" class="section">
+            <h2>Noite da Cozinha</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Nossas aventuras gastronômicas, cozinhando juntos e criando memórias deliciosas. Simplesmente as melhores comidas ja feitas na face da Terra</p>
+            <h3>Diretamente do nosso Livro de Receitas</h3>
+            <div class="moment-photos">
+                <div class="moment-photo-container">
+                        <img class="moment-photo" src="./images/livrodereceitas2.jpeg" alt="livro">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/livrodereceitas.jpeg" alt="livro">
+                </div>
+            </div>
+            <h3>As receitas mais deliciosas de todas</h3>
+            <p>By: Chef Verônica Jacquin e Lucas Fogaça 👩‍🍳👨‍🍳</p>
+            <h4>Pizza de Abobrinha e Pizza de Chocolate com Uva</h4>
+            <div class="moment-photos">
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/pizza.jpeg" alt="Pizza">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/pizza2.jpeg" alt="Pizza">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/pizza3.jpeg" alt="Pizza">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/pizza4.jpeg" alt="Pizza">
+                </div>
+            </div>
+            <br>
+            <h4>Baião de Dois</h4>
+            <div class="moment-photos">
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/baiao.jpeg" alt="baiao">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/baiao2.jpeg" alt="baiao">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/baiao3.jpeg" alt="baiao">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/baiao4.jpeg" alt="baiao">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/baiao5.jpeg" alt="baiao">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/baiao6.jpeg" alt="baiao">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/baiao7.jpeg" alt="baiao">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/baiao8.jpeg" alt="baiao">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/baiao9.jpeg" alt="baiao">
+                </div>
+            </div>
+            <br>
+            <h4>Gyudon e karague</h4>
+            <div class="moment-photos">
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/guydon.jpeg" alt="Gyudon">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/guydon2.jpeg" alt="Gyudon">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/guydon3.jpeg" alt="Gyudon">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/guydon4.jpeg" alt="Gyudon">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/guydon5.jpeg" alt="Gyudon">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/guydon6.jpeg" alt="Gyudon">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/guydon7.jpeg" alt="Gyudon">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/guydon8.jpeg" alt="Gyudon">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/guydon9.jpeg" alt="Gyudon">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/guydon10.jpeg" alt="Gyudon">
+                </div>
+            </div>
+            <br>
+            <h4>Parmegiana de frango</h4>
+            <div class="moment-photos">
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/parmegiana.jpeg" alt="Parmegiana">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/parmegiana2.jpeg" alt="Parmegiana">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/parmegiana3.jpeg" alt="Parmegiana">
+                </div>
+            </div>
+            <br>
+            <h4>Frango com molho branco</h4>
+            <div class="moment-photos">
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/frango com molho branco.jpeg" alt="frango">
+                </div>
+            </div>
+            <br>
+            <h4>Churros de Air Fryer</h4>
+            <div class="moment-photos">
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/churros.jpeg" alt="churros">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/churros2.jpeg" alt="churros">
+                </div>
+            </div>
+        </section>
+
+        <section id="bichos" class="section">
+            <h2>Bichos</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Nossos filhos Lucas Alberto, Valentina, Peba e Polly 🐶🐱🐭🐶</p>
+            
+            <div class="moment-photos">
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos2.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos3.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos4.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos5.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos6.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos7.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos8.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos9.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos10.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos11.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos12.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos13.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos14.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos15.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos16.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos17.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos18.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos19.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos20.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos21.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos22.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos23.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos24.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos25.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos26.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos27.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos28.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos29.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos30.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos31.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos32.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos33.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos34.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos35.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos36.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos37.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos38.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos39.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos40.jpeg" alt="bicho">
+                </div>
+                <video autoplay muted loop>>
+                        <source src="./images/bichos46.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                </video>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos41.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos42.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos43.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos44.jpeg" alt="bicho">
+                </div>
+                <div class="moment-photo-container">
+                    <img class="moment-photo" src="./images/bichos45.jpeg" alt="bicho">
+                </div>
+            </div>
+        </section>
+    
+    <footer>
+        <p>Feito com ❤️ por Lucas Franco para Veronica dos Anjos</p>
+        <p>© <span id="current-year">2024</span> - Todos os direitos reservados</p>
+        <button onclick="scrollToTop()" id="topButton" title="Voltar para o topo">⬆️</button>
+    </footer>
+    
+        <script>
+        // Calcula o tempo de relacionamento com precisão
+        function updateAnniversaryCounter() {
+            const startDate = new Date('August 25, 2024 00:00:00');
+            const currentDate = new Date();
+            
+            // Diferença total em milissegundos
+            let diff = currentDate - startDate;
+            
+            // Calcula segundos
+            let seconds = Math.floor(diff / 1000);
+            
+            // Calcula minutos
+            let minutes = Math.floor(seconds / 60);
+            seconds = seconds % 60;
+            
+            // Calcula horas
+            let hours = Math.floor(minutes / 60);
+            minutes = minutes % 60;
+            
+            // Calcula dias
+            let days = Math.floor(hours / 24);
+            hours = hours % 24;
+            
+            // Calcula anos e meses - mais complexo por causa dos meses variáveis
+            let years = currentDate.getFullYear() - startDate.getFullYear();
+            let months = currentDate.getMonth() - startDate.getMonth();
+            
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+            
+            // Ajuste para dias - se o dia atual é menor que o dia de início
+            if (currentDate.getDate() < startDate.getDate()) {
+                months--;
+                if (months < 0) {
+                    months = 11;
+                    years--;
+                }
+                
+                // Cria uma data temporária para calcular os dias do último mês completo
+                const tempDate = new Date(currentDate);
+                tempDate.setMonth(tempDate.getMonth() - 1);
+                const daysInLastMonth = new Date(
+                    tempDate.getFullYear(),
+                    tempDate.getMonth() + 1,
+                    0
+                ).getDate();
+                
+                days = daysInLastMonth - startDate.getDate() + currentDate.getDate();
+            } else {
+                days = currentDate.getDate() - startDate.getDate();
+            }
+            
+            // Atualiza os valores na página
+            document.getElementById('years').textContent = years;
+            document.getElementById('months').textContent = months;
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+        
+        // Atualiza o ano no footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Atualiza o contador quando a página carrega e a cada segundo
+        window.onload = function() {
+            updateAnniversaryCounter();
+            setInterval(updateAnniversaryCounter, 1000);
+        };
+        
+        // Rolagem suave para as seções
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function toggleMusic(musicId) {
+      const music = document.getElementById(musicId);
+
+        // Pausa as outras músicas
+        document.querySelectorAll('audio').forEach(audio => {
+            if (audio.id !== musicId) {
+            audio.pause();
+            audio.currentTime = 0;
+            }
+        });
+
+        // Toca ou pausa a selecionada
+        if (music.paused) {
+            music.play();
+        } else {
+            music.pause();
+        }
+        }
+
+        // Mostra o botão quando rolar a página
+        window.onscroll = function() { toggleTopButton(); };
+
+        function toggleTopButton() {
+        const btn = document.getElementById("topButton");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+        }
+
+        // Função para voltar ao topo
+        function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        }
+
+    </script>
+</body>
+</html>
